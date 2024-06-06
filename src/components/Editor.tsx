@@ -6,6 +6,8 @@ import {
 } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { initialContent } from "./initialContent";
+import { lowlight } from "lowlight";
+import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
 export interface EditorProps {}
 
 export function Editor() {
@@ -16,6 +18,11 @@ export function Editor() {
   const editor = useEditor({
     extensions,
     content,
+    editorProps: {
+      attributes: {
+        class: "outline-none",
+      },
+    },
   });
 
   return (
