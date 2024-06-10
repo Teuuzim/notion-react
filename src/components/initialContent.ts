@@ -42,12 +42,16 @@ export const initialContent = `
               <strong>Responsive Design:</strong> Tailwind CSS provides built-in
               responsive design utilities. You can easily apply different styles
               at different screen sizes using intuitive class names like{" "}
-              <code>md:text-lg</code> or <code>lg:p-4</code>.
+              <code class="language-javascript">console.log("Hello World")
+              </code > or 
+              <code class="language-javascript">
+              console.log("Hello World"); 
+              </code>.
               <pre>
-                <code>
-                  &lt;div class="p-4 md:p-8 lg:p-12"&gt; &lt;p class="text-sm
-                  md:text-base lg:text-lg"&gt;Responsive text size and
-                  padding&lt;/p&gt; &lt;/div&gt;
+                <code class="language-javascript">
+                  <div class="p-4 md:p-8 lg:p-12"> <p class="text-sm
+                  md:text-base lg:text-lg">Responsive text size and
+                  padding</p> </div>
                 </code>
               </pre>
             </li>
@@ -70,11 +74,8 @@ export const initialContent = `
               clear examples and guides to help you get the most out of the
               framework.
               <pre>
-                <code>
-                  &lt;div class="text-center mt-8"&gt; &lt;a
-                  href="https://tailwindcss.com/docs" class="text-blue-500
-                  hover:underline"&gt;Check out the Tailwind CSS
-                  Documentation&lt;/a&gt; &lt;/div&gt;
+                <code class="language-javascript">
+                  console.log("Hello world")
                 </code>
               </pre>
             </li>
@@ -98,4 +99,4 @@ export const initialContent = `
           </p>
         </article>
       </main>
-      <footer>&copy; 2024 Your Blog Name</footer>`
+      <footer>&copy; 2024 Your Blog Name</footer>`;

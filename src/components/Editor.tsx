@@ -5,19 +5,25 @@ import {
   BubbleMenu,
 } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import { initialContent } from "./initialContent";
-import { lowlight } from "lowlight";
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
-export interface EditorProps {}
+import { initialContent } from "./initialContent";
+import { createLowlight } from "lowlight";
+import js from "highlight.js/lib/languages/javascript";
+import "highlight.js/styles/atom-one-dark.css";
+
+const lowlight = createLowlight()
+
+lowlight.register("js", js);
 
 export function Editor() {
-  const extensions = [StarterKit];
-
-  const content = initialContent;
-
   const editor = useEditor({
-    extensions,
-    content,
+    extensions: [
+      StarterKit,
+      CodeBlockLowlight.configure({
+        lowlight,
+      }),
+    ],
+    content: initialContent,
     editorProps: {
       attributes: {
         class: "outline-none",
