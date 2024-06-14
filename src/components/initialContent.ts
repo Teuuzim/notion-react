@@ -42,17 +42,7 @@ export const initialContent = `
               <strong>Responsive Design:</strong> Tailwind CSS provides built-in
               responsive design utilities. You can easily apply different styles
               at different screen sizes using intuitive class names like{" "}
-              <code class="language-javascript">console.log("Hello World")
-              </code > or 
-              <code class="language-javascript">
-              console.log("Hello World"); 
-              </code>.
-              <pre>
-                <code class="language-javascript">
-                  <div class="p-4 md:p-8 lg:p-12"> <p class="text-sm
-                  md:text-base lg:text-lg">Responsive text size and
-                  padding</p> </div>
-                </code>
+      
               </pre>
             </li>
             <li>
@@ -73,11 +63,7 @@ export const initialContent = `
               beginner or an experienced developer, the documentation provides
               clear examples and guides to help you get the most out of the
               framework.
-              <pre>
-                <code class="language-javascript">
-                  console.log("Hello world")
-                </code>
-              </pre>
+              <pre><code class="language-javascript">console.log("Hi my name is Matheus Henrique Vaz")</code></pre>
             </li>
             <li>
               <strong>Community and Ecosystem:</strong> Tailwind CSS has a

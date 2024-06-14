@@ -9,9 +9,9 @@ import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
 import { initialContent } from "./initialContent";
 import { createLowlight } from "lowlight";
 import js from "highlight.js/lib/languages/javascript";
-import "highlight.js/styles/atom-one-dark.css";
+import "highlight.js/styles/obsidian.min.css";
 
-const lowlight = createLowlight()
+const lowlight = createLowlight();
 
 lowlight.register("js", js);
 
@@ -38,7 +38,9 @@ export function Editor() {
         editor={editor}
       />
       <FloatingMenu editor={editor}>This is the floating menu</FloatingMenu>
-      <BubbleMenu editor={editor}>This is the bubble menu</BubbleMenu>
+      { editor && (
+      <BubbleMenu className="" editor={editor}><button>Bold</button></BubbleMenu>
+      )}
     </>
   );
 }
