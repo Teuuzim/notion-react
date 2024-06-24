@@ -54,9 +54,7 @@ export function Editor() {
           className="bg-zinc-700 py-2 px-1 shadow-xl border gap-1 border-zinc-600 shadow-black/20 rounded-lg overflow-hidden flex flex-col divide-x divide-zinc-600"
           shouldShow={({ state }) => {
             const { $from } = state.selection;
-
             const currentLineText = $from.nodeBefore?.textContent;
-
             return currentLineText === "/";
           }}
         >
@@ -87,9 +85,7 @@ export function Editor() {
             />
             <div className="flex flex-col text-left">
               <span className="text-sm">Heading 1</span>
-              <span className="text-xm text-zinc-400">
-                Big section heading.
-              </span>
+              <span className="text-xm text-zinc-400">Big section heading.</span>
             </div>
           </button>
         </FloatingMenu>
@@ -99,7 +95,7 @@ export function Editor() {
           className="bg-zinc-700 shadow-xl border border-zinc-600 shadow-black/20 rounded-lg overflow-hidden flex divide-x divide-zinc-600"
           editor={editor}
         >
-           <BubbleButton>
+          <BubbleButton>
             <Popover.Root>
               <Popover.Trigger className="flex items-center gap-1">
                 Text
@@ -117,35 +113,47 @@ export function Editor() {
             <RxChatBubble className="w-4 h-4" />
             Comment
           </BubbleButton>
-          <div className="flex items-center">
-            <BubbleButton
+          <ToggleGroup.Root
+            type="multiple"
+            className="flex items-center space-x-1"
+          >
+            <ToggleGroup.Item
+              value="bold"
               onClick={() => editor.chain().focus().toggleBold().run()}
-              data-active={editor.isActive("bold")}
+              className={`${
+                editor.isActive("bold") ? "bg-zinc-600" : ""
+              } p-1 rounded`}
             >
               <RxFontBold className="w-4 h-4" />
-            </BubbleButton>
-
-            <BubbleButton
+            </ToggleGroup.Item>
+            <ToggleGroup.Item
+              value="italic"
               onClick={() => editor.chain().focus().toggleItalic().run()}
-              data-active={editor.isActive("italic")}
+              className={`${
+                editor.isActive("italic") ? "bg-zinc-600" : ""
+              } p-1 rounded`}
             >
               <RxFontItalic className="w-4 h-4" />
-            </BubbleButton>
-
-            <BubbleButton
+            </ToggleGroup.Item>
+            <ToggleGroup.Item
+              value="strike"
               onClick={() => editor.chain().focus().toggleStrike().run()}
-              data-active={editor.isActive("strike")}
+              className={`${
+                editor.isActive("strike") ? "bg-zinc-600" : ""
+              } p-1 rounded`}
             >
               <RxStrikethrough className="w-4 h-4" />
-            </BubbleButton>
-
-            <BubbleButton
+            </ToggleGroup.Item>
+            <ToggleGroup.Item
+              value="code"
               onClick={() => editor.chain().focus().toggleCode().run()}
-              data-active={editor.isActive("code")}
+              className={`${
+                editor.isActive("code") ? "bg-zinc-600" : ""
+              } p-1 rounded`}
             >
               <RxCode className="w-4 h-4" />
-            </BubbleButton>
-          </div>
+            </ToggleGroup.Item>
+          </ToggleGroup.Root>
         </BubbleMenu>
       )}
     </>
