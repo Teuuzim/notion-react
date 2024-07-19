@@ -1,35 +1,12 @@
 export const initialContent = `
 <header>
-        <h1>Advantages of Tailwind CSS</h1>
+        <h1>Tarefas para fazer</h1>
       </header>
       <main>
         <article>
-          <h2>What is Tailwind CSS?</h2>
-          <p>
-            Tailwind CSS is a utility-first CSS framework that provides a highly
-            customizable, low-level set of CSS classes. Unlike traditional CSS
-            frameworks that offer pre-designed components, Tailwind allows
-            developers to style their web pages by composing small utility
-            classes directly in their HTML.
-          </p>
-          <p>
-            This approach enables developers to write more concise and more
-            content about this is available in{" "}
-            <a href="https://tailwindcss.com">tailwindcss.com </a>
-          </p>
-
-          <blockquote>
-            "Tailwind CSS is more than a utility-first CSS framework; it's a
-            powerful design tool that transforms how we build web applications."
-          </blockquote>
-
-          <h2>Advantages of Using Tailwind CSS</h2>
           <ul>
             <li>
-              <strong>Highly Customizable:</strong> Tailwind CSS is designed to
-              be highly configurable. You can tailor the framework to your
-              specific needs by modifying the configuration file, which allows
-              for custom colors, spacing, typography, and more.
+              <strong>Analise de algoritmos:</strong> Fazer atividade 
             </li>
             <li>
               <strong>Utility-First Approach:</strong> By focusing on utility
